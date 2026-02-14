@@ -25,5 +25,11 @@ def create_app():
         print(random_movie)
         return render_template('random.html', movie=random_movie)
 
+    @app.route('/profile')
+    def profile():
+
+        return render_template('profile.html')
+
+
 
     return app
