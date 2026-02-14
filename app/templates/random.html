@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Random Movie!</title>
+
+</head>
+<body>
+  {% if movie %}
+  <h1>{{ movie.title }}</h1>
+  <p>{{ movie.overview }}</p>
+  <p>{{ movie.release_date }}</p>
+  <img src="https://image.tmdb.org/t/p/w500{{ movie.poster_path }}" alt="{{ movie.title }}">
+  {% else %}
+  <h1>Random Movie!</h1>
+  {% endif %}
+</body>
+</html>
