@@ -16,11 +16,13 @@ class Movie(db.Model):
     __tablename__ = 'movies'
 
     id = db.Column(db.Integer, primary_key=True)
+    tmdb_id = db.Column(db.Integer, unique=True, nullable=False)
     title = db.Column(db.String(255), unique=True, nullable=False)
-    year = db.columng(db.Integer)
-    genre = db.Column(db.String)
-    imdb_rating = db.Column(db.Float)
-    description = db.Column(db.String)
-
+    overview = db.Column(db.Text)
+    release_date = db.Column(db.Date)
+    year = db.Column(db.Integer)
+    poster_path = db.Column(db.String(255))
+    backdrop_path = db.Column(db.String(255))
+    genre_ids = db.Column(db.String(50))
     def __repr__(self):
         return f'Movie {self.title}'
