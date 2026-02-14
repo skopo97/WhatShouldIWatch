@@ -43,6 +43,8 @@ def create_app():
 
         return render_template('profile.html')
 
+    @app.route('/login')
+    def login():
 
-
+        return render_template('login.html')
     return app
