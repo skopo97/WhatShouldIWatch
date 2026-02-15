@@ -14,6 +14,8 @@ def create_app():
     app = Flask(__name__)
     app.config.from_object(Config)
 
+    from app import models
+
     db.init_app(app)
     migrate.init_app(app, db)
     login_manager.init_app(app)
@@ -50,10 +52,12 @@ def create_app():
 
     @app.route('/register', methods=['GET', 'POST'])
     def register():
-        if request.form == 'POST':
+        if request.method == 'POST':
             username = request.form.get('username')
             email = request.form.get('email')
             password = request.form.get('password')
+
+            print(f"Registration attempt: {username}, {email}")
 
             from app.models import User
             existing_user = User.query.filter_by(username=username).first()
@@ -63,8 +67,10 @@ def create_app():
 
             new_user = User(username=username, email=email)
             new_user.set_password(password)
+            print(f"User created: {new_user}")
             db.session.add(new_user)
             db.session.commit()
+            print("User committed to database")
 
             flash('Registration completed. You may now login.')
             return redirect(url_for('login'))
