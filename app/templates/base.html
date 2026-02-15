@@ -3,14 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width-device-width, initial-scale=1.0">
-    <title>What should I watch?</title>
+    <title>{% block title %}What should I watch?{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/static.css') }}">
 </head>
 <body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/random">Random Movie</a></li>
+            {% if current_user.is_authenticated %}
+            <li><a href="/profile">Profile</a></li>
+            {% else %}
+            <li><a href="/login">Login</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+{% block content %}
     <h1>Welcome to my movie and series picking page</h1>
-    <p>The app is successfully running now</p>
-    <a href="/random">
-        <button type="button">Click here</button>
-    </a>
     {% if current_user.is_authenticated %}
     <a href="/profile">
         <button type="button">Profile</button>
@@ -20,5 +30,6 @@
         <button type="button">Login</button>
     </a>
     {% endif %}
+{% endblock %}
 </body>
 </html>

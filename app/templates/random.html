@@ -1,11 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+{% extends 'base.html' %}
     <meta charset="UTF-8">
-    <title>Random Movie!</title>
+    {% block title %}<title>Random Movie!</title>{% endblock %}
+{% block content %}
 
-</head>
-<body>
+
   {% if movie %}
   <h1>{{ movie.title }}</h1>
   <p>{{ movie.overview }}</p>
@@ -14,5 +12,4 @@
   {% else %}
   <h1>Random Movie!</h1>
   {% endif %}
-</body>
-</html>
+{% endblock %}
