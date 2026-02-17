@@ -1,8 +1,6 @@
 {% extends 'base.html' %}
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-{% block title %}<title>Login</title>{% endblock %}
+{% block title %}Login{% endblock %}
 
 {% block content %}
 <div class="container">
@@ -18,23 +16,19 @@
 {% endwith %}
 
 <main class="container">
-<div class ="grid"
-<form method="POST" action="/login">
-    <div>
-        <label>Username:</label>
-        <input type="text" name="username" required>
+    <div class ="grid">
+        <form class="form" method="POST" action="/login">
+        <div>
+            <label>Username:</label>
+            <input type="text" name="username" required placeholder="Username">
+        </div>
+        <div>
+            <label>Password:</label>
+            <input type="password" name="password" required placeholder="********">
+        </div>
+        <button type="submit">Login</button>
+        </form>
     </div>
-    <div>
-        <label>Password:</label>
-        <input type="password" name="password" required>
-    </div>
-</form>
-</div>
-<div class ="grid"
-     <form method="POST" action="/login"
-    <button type="submit">Login</button>
-</form>
-</div>
+    <p>Don't have an account? <a href="/register">Register here</a></p>
 </main>
-<p>Don't have an account? <a href="/register">Register here</a></p>
 {% endblock %}

@@ -1,9 +1,12 @@
 {% extends 'base.html' %}
 
-{% block title %}Register{% endblock %}
+{% block title%}Register{% endblock %}
 
 {% block content %}
-    <h1>Register</h1>
+    <div class="container">
+        <h1>Register</h1>
+    </div>
+
 
     {% with messages = get_flashed_messages() %}
         {% if messages %}
@@ -13,7 +16,9 @@
         {% endif %}
     {% endwith %}
 
-    <form method="POST" action="/register">
+<main class="container">
+    <div class="grid">
+        <form class="form" method="POST" action="/register">
         <div>
             <label>Username:</label>
             <input type="text" name="username" required placeholder="Username">
@@ -27,7 +32,9 @@
             <input type="password" name="password" required placeholder="********">
         </div>
         <button type="submit">Register</button>
-    </form>
-
+        </form>
+    </div>
     <p>Already have an account? <a href="/login">Login here</a></p>
+</main>
+
 {% endblock %}
