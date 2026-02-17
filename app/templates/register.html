@@ -18,7 +18,7 @@
 
 <main class="container">
     <div class="grid">
-        <form class="form" method="POST" action="/register">
+        <form class="form" method="POST" action="{{ url_for('auth.register') }}">
         <div>
             <label>Username:</label>
             <input type="text" name="username" required placeholder="Username">
@@ -34,7 +34,7 @@
         <button type="submit">Register</button>
         </form>
     </div>
-    <p>Already have an account? <a href="/login">Login here</a></p>
+    <p>Already have an account? <a href="{{ url_for('auth.login') }}">Login here</a></p>
 </main>
 
 {% endblock %}
