@@ -10,11 +10,11 @@ This project is currently a **work-in-progress**. Contributions, feedback, and c
 
 **WhatShouldIWatch** is a Flask-based project that enables users to streamline their content selection by using genre-based filters, user preferences, and ratings.
 
-## 🔧 Features
+## 🔧 Features **Work in progress**
 
 - Filter by genre, release year, or rating.
 - Login system for personalized user experience.
-- Create and manage your **Upcoming Watchlist**.
+- Create and manage your Watchlist.
 - Favorite movies and series for quick access later.
 - Utilizes SQLite for lightweight and efficient data storage.
 - Integrates with **TMDb API** for fetching detailed information about movies and TV shows.
@@ -58,21 +58,10 @@ This project is licensed under the [MIT License](https://github.com/skopo97/What
      ```
      TMDB_API_KEY=your_api_key_here
 
-
 5. Run the application:
    ```bash
    python main.py
    ```
-
-## 🤝 Contribute
-
-We welcome contributions from the community! To contribute, please:
-
-1. Fork the project.
-2. Create your feature branch: `git checkout -b feature/AmazingFeature`.
-3. Commit your changes: `git commit -m 'Add some AmazingFeature'`.
-4. Push to the branch: `git push origin feature/AmazingFeature`.
-5. Open a pull request.
 
 ## 📭 Contact
 
