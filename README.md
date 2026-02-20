@@ -50,7 +50,14 @@ This project is licensed under the [MIT License](https://github.com/skopo97/What
 
 4. Set up your TMDb API key:
    - Visit [The Movie Database](https://www.themoviedb.org/) to sign up and obtain an API key.
-   - Add the API key to your project settings or environment variables.
+   - Create a `.env` file in the root of the project:
+     ```bash
+     cp .env.example .env
+     ```
+   - Add your API key to the `.env` file:
+     ```
+     TMDB_API_KEY=your_api_key_here
+
 
 5. Run the application:
    ```bash
