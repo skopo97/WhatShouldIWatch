@@ -1,0 +1,72 @@
+# WhatShouldIWatch (Work-in-Progress)
+
+A tool designed to help you pick a movie or series to watch based on filters and preferences.
+
+## 🚧 Project Status
+
+This project is currently a **work-in-progress**. Contributions, feedback, and collaboration are welcome to enhance its features and usability.
+
+## 📚 Description
+
+**WhatShouldIWatch** is a Flask-based project that enables users to streamline their content selection by using genre-based filters, user preferences, and ratings.
+
+## 🔧 Features
+
+- Filter by genre, release year, or rating.
+- Login system for personalized user experience.
+- Create and manage your **Upcoming Watchlist**.
+- Favorite movies and series for quick access later.
+- Utilizes SQLite for lightweight and efficient data storage.
+- Integrates with **TMDb API** for fetching detailed information about movies and TV shows.
+
+## 🛠️ Tech Stack
+
+- **Python**: Core language for back-end logic.
+- **Flask**: Web framework for building and handling the application.
+- **HTML** & **CSS**: For the structure and styling of the front-end.
+- **SQLite**: A lightweight relational database for storing user data.
+- **TMDb API**: Provides the data for movies and TV shows.
+
+## 📝 License
+
+This project is licensed under the [MIT License](https://github.com/skopo97/WhatShouldIWatch/blob/main/LICENSE). You are free to use, distribute, and modify the software under the terms of this license.
+
+## 🚀 Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/skopo97/WhatShouldIWatch.git
+   ```
+
+2. Navigate to the project directory:
+   ```bash
+   cd WhatShouldIWatch
+   ```
+
+3. Install the required dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. Set up your TMDb API key:
+   - Visit [The Movie Database](https://www.themoviedb.org/) to sign up and obtain an API key.
+   - Add the API key to your project settings or environment variables.
+
+5. Run the application:
+   ```bash
+   python main.py
+   ```
+
+## 🤝 Contribute
+
+We welcome contributions from the community! To contribute, please:
+
+1. Fork the project.
+2. Create your feature branch: `git checkout -b feature/AmazingFeature`.
+3. Commit your changes: `git commit -m 'Add some AmazingFeature'`.
+4. Push to the branch: `git push origin feature/AmazingFeature`.
+5. Open a pull request.
+
+## 📭 Contact
+
+For support, questions, or suggestions, reach out to [skopo97](https://github.com/skopo97).
